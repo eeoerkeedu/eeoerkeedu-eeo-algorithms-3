@@ -19,28 +19,23 @@ before(function() {
   })();
 });
 
-describe("countdown", function() {
-  it("log numbers from `num` down to 1", function() {
-    var num = 15;
+describe("fizzBuzz", function() {
+  it('takes an array and for each element prints "Fizz" for numbers evenly divisible by 3, "Buzz" for numbers evenly divisible by 5, "Fizz Buzz" for numbers evenly divisible by 3 AND 5. Otherwise it prints the number if not evenly divisible by 3 or 5.', function() {
+    var arr = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-    countdown(num);
+    fizzBuzz(arr);
 
     expect(console.log.calledWith()).to.eql([
-      15,
-      14,
-      13,
-      12,
-      11,
-      10,
-      9,
-      8,
+      "Fizz",
       7,
-      6,
-      5,
-      4,
-      3,
-      2,
-      1
+      8,
+      "Fizz",
+      "Buzz",
+      11,
+      "Fizz",
+      13,
+      14,
+      "Fizz Buzz"
     ]);
   });
 });
